@@ -6,7 +6,7 @@ int main() {
     char letra1 = 'A', letra2 = 'B';
     char codigo1[5] = "A01", codigo2[5] = "B02";
     char cidade1[50] = "São paulo", cidade2[50] = "Rio de janeiro";
-    float populacao1 = 11.9, populacao2 = 16.05;
+    float populacao1 = 12, populacao2 = 12;
     float area1 = 1521 , area2 = 1200;
     float pib1 = 3.5 , pib2 = 1.3;
     int pontos1 = 36, pontos2 = 48;
@@ -105,50 +105,104 @@ int main() {
 //utilizei apenas 1 comando por carta
 
 printf("--------------------------\n");
-printf("Os vencedores são:");
 
-if(populacao1 > populacao2){
-    printf("O vencedor em população foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em população foi %s, Carta %s\n", cidade2, codigo2);
+int opcao;
+
+printf("Agora, selecione os valores que quer comparar:\n");
+printf("Para o resultado em populaçã, digite 1\n");
+printf("Para o resultado em área, digite 2\n");
+printf("Para o resultado em PIB, digite 3\n");
+printf("Para o resultado em quantidade de pontos turisticos, digite 4\n");
+printf("Para o resultado em densidade populacional, digite 5\n");
+printf("Para o resultado em PIB per capita, digite 6\n");
+printf("Para o resultado em SUPER PODER!!, digite 7\n");
+printf("Sua escolha:");
+scanf("%d", &opcao);
+
+switch(opcao){
+
+    case 1:
+        if(populacao1 > populacao2){
+            printf("O vencedor em população foi %s, Carta %s\n", cidade1, codigo1);
+        }else if(populacao1 < populacao2){
+            printf("O vencedor em população foi %s, Carta %s\n", cidade2, codigo2);
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+
+    case 2:
+        if(area1 > area2){
+            printf("O vencedor em Area foi %s, Carta %s\n", cidade1, codigo1);
+        
+        }else if(area1 < area2){
+            printf("O vencedor em Area foi %s, Carta %s\n", cidade2, codigo2);
+        
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+    
+    case 3:
+        if(pib1 > pib2){
+            printf("O vencedor em PIB foi %s, Carta %s\n", cidade1, codigo1);
+        
+        }else if(pib1 < pib2){
+            printf("O vencedor em PIB foi %s, Carta %s\n", cidade2, codigo2);
+        
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+
+    case 4:
+        if(pontos1 > pontos2){
+            printf("O vencedor em pontos turisticos foi %s, Carta %s\n", cidade1, codigo1);       
+        
+        }else if(pontos1 < pontos2){
+            printf("O vencedor em pontos turisticos foi %s, Carta %s\n ", cidade2, codigo2);
+        
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+
+    case 5:
+        if(densidade1 < densidade2){
+            printf("O vencedor em densidade polulacional foi %s, Carta %s\n", cidade1, codigo1);
+         
+        }else if(densidade1 > densidade2){
+            printf("O vencedor em densidade polulacional foi %s, Carta %s\n", cidade2, codigo2);
+        
+        }else{
+            printf("Tivemos um empate!!!\n");
+        } 
+    break;
+    
+    case 6:
+        if(pibpc1 > pibpc2){
+            printf("O vencedor em PIB per capita foi %s, Carta %s\n", cidade1, codigo1);
+        
+        }else if(pibpc1 < pibpc2){
+            printf("O vencedor em PIB per capita foi %s, Carta %s\n", cidade2, codigo2);
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+
+    case 7:
+        if(superpoder1 > superpoder2){
+            printf("O vencedor em Super poder foi %s, Carta %s\n", cidade1, codigo1);
+        }else if(superpoder1 < superpoder2){
+            printf("O vencedor em Super poder foi %s, Carta %s\n", cidade2, codigo2);
+        }else{
+            printf("Tivemos um empate!!!\n");
+        }
+    break;
+
+    default:
+        printf("Seleção invalida\n");
 }
-
-if(area1 > area2){
-    printf("O vencedor em Area foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em Area foi %s, Carta %s\n", cidade2, codigo2);
-}
-
-if(pib1 > pib2){
-    printf("O vencedor em PIB foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em PIB foi %s, Carta %s\n", cidade2, codigo2);
-}
-
-if(pontos1 > pontos2){
-    printf("O vencedor em pontos turisticos foi %s, Carta %s\n", cidade1, codigo1);       
-}else{
-    printf("O vencedor em pontos turisticos foi %s, Carta %s\n ", cidade2, codigo2);
-}
-
-if(densidade1 < densidade2){
-    printf("O vencedor em densidade polulacional foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em densidade polulacional foi %s, Carta %s\n", cidade2, codigo2);
-}
-
-if(pibpc1 > pibpc2){
-    printf("O vencedor em PIB per capita foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em PIB per capita foi %s, Carta %s\n", cidade2, codigo2);
-}
-
-if(superpoder1 > superpoder2){
-    printf("O vencedor em Super poder foi %s, Carta %s\n", cidade1, codigo1);
-}else{
-    printf("O vencedor em Super poder foi %s, Carta %s\n", cidade2, codigo2);
-}
-
 printf("--------------------------\n");
 printf("Espero que tenha gostado!!!\n""Obrigado.\n");
 
